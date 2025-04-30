@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang thông báo nâng cao</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 0;
+        }
+        header {
+            background-color: #005792;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin: 5px 0;
+            padding: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🔔 THÔNG BÁO WEBSITE 🔔</h1>
+</header>
+
+<section>
+    <h2>📢 Nội dung thông báo</h2>
+    <p>Chúng tôi xin thông báo rằng hệ thống sẽ bảo trì vào ngày mai. Vui lòng lưu ý để không bị gián đoạn.</p>
+</section>
+
+<section class="gallery">
+    <h2>📷 Hình ảnh liên quan</h2>
+    <img src="https://i.imgur.com/abc123.jpg" alt="Ảnh 1">
+    <img src="https://i.imgur.com/def456.jpg" alt="Ảnh 2">
+</section>
+
+<section>
+    <h2>📩 Gửi liên hệ</h2>
+    <form>
+        <input type="text" placeholder="Tên của bạn" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Nội dung..." required></textarea>
+        <button type="submit">Gửi</button>
+    </form>
+</section>
+
+<footer>
+    ⏰ Thời gian: <span id="time"></span>
+</footer>
+
+<script>
+    // Cập nhật đồng hồ
+    setInterval(() => {
+        const now = new Date();
+        document.getElementById('time').innerText = now.toLocaleString();
+    }, 1000);
+
+    // Thông báo popup khi mở trang
+    window.onload = () => {
+        alert("Chào mừng bạn đến với trang thông báo!");
+    };
+</script>
+
+</body>
+</html>
